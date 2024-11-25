@@ -4,17 +4,17 @@ using System.Diagnostics;
 internal class Program
 {
 
-   
-    
+
+
 
     private static void Main(string[] args)
     {
 
         bool running = true;
 
-        while(running)
+        while (running)
         {
-            Console.Clear();
+            
             Console.WriteLine("=== Lista Zadań ===");
             Console.WriteLine("=== 1. Wyświetl zadania ===");
             Console.WriteLine("=== 2. Dodaj zadanie ===");
@@ -23,31 +23,31 @@ internal class Program
 
 
 
-        }
 
-        string choice = Console.ReadLine();
 
-        switch (choice)
-        {
-            case "1":
-                displayTask.DisplayTask();
-                break;
-            case "2":
-                displayTask.AddTask();
-                break;
-            case "3":
-                displayTask.RemoveTask();
-                break;
-            case "4":
-                running = false;
-                break;
-            default:
-                Console.WriteLine("Nieprawidłowa opcja, spróbuj jeszcze raz.");
-                Console.ReadKey();
-                break;
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    displayTask.DisplayTask();
+                    break;
+                case "2":
+                    displayTask.AddTask();
+                    break;
+                case "3":
+                    displayTask.RemoveTask();
+                    break;
+                case "4":
+                    running = false;
+                    break;
+                default:
+                    Console.WriteLine("Nieprawidłowa opcja, spróbuj jeszcze raz.");
+                    Console.ReadKey();
+                    break;
+            }
         }
     }
-
     
 
     

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Main
 {
-    public class displayTask
+    public static class displayTask
     {
 
         static List<string> taskList = new List<string>();
@@ -55,7 +55,11 @@ namespace Main
 
         internal static void RemoveTask()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Wybierz zadanie do usunięcia: ");
+            taskList.Remove(Console.ReadLine());
+            Console.WriteLine("Pomyślnie usunięto zadanie :D ");
+
+
         }
     }
 }
